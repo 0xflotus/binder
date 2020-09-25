@@ -95,7 +95,7 @@ python manage.py dumpdata -o binder/fixtures/initial_data.json
 
 ### Encrypted TSIG Keys ###
 
-Starting with version 1.5, TSIG keys inside the database are encrypted using the [Crytography](https://cryptography.io/en/latest/fernet/) library and Fernet facilities.
+Starting with version 1.5, TSIG keys inside the database are encrypted using the [Cryptography](https://cryptography.io/en/latest/fernet/) library and Fernet facilities.
 
 Normally on startup, a new Fernet encryption key is created. This will change upon reboot as the process dies and restarts.
 
@@ -168,13 +168,13 @@ For information on TSIG see http://www.cyberciti.biz/faq/unix-linux-bind-named-c
 
 If you are using Apache to front-end your Binder Django app, the following two configuration files can be used as starting points.
 
-[binder-apache.conf.dist](https://github.com/jforman/binder/blob/master/config/binder-apache.conf.dist): Apache virtual host configuration file to be inclued in your apache.conf. Values provide for Binder to run on its own virtual host, separate logs, etc
+[binder-apache.conf.dist](https://github.com/jforman/binder/blob/master/config/binder-apache.conf.dist): Apache virtual host configuration file to be included in your apache.conf. Values provide for Binder to run on its own virtual host, separate logs, etc
 
 [django.wsgi](https://github.com/jforman/binder/blob/master/config/django.wsgi): WSGI configuration file used by Apache to run the actual Django app.
 
 ### Nginx ###
 
-[binder-nginx.conf.dist](https://github.com/jforman/binder/blob/master/config/binder-nginx.conf.dist): Nginx virtual host configuraiton. This configuration expects Django to be running in fcgi mode on port 4001 on 127.0.0.1.
+[binder-nginx.conf.dist](https://github.com/jforman/binder/blob/master/config/binder-nginx.conf.dist): Nginx virtual host configuration. This configuration expects Django to be running in fcgi mode on port 4001 on 127.0.0.1.
 
 #### MySQL ###
 
